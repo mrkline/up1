@@ -1,0 +1,9 @@
+[package]
+name = "up1"
+version = "0.1.0"
+authors = ["Matt Kline <matt@bitbashing.io>"]
+license = "GPL-2.0"
+categories = ["command-line-utilities"]
+
+[dependencies]
+getopts = "0.2" # Args parsing
