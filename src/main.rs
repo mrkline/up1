@@ -60,7 +60,7 @@ fn get_unique_temporary_name(parent_dir: &Path) -> io::Result<PathBuf> {
     // Put an increasing number of underscores on the parent_dir's name
     // until we get a unique name.
     for num_underscores in 1usize.. {
-        let mut with_underscores: String = (0..num_underscores).map(|_| "_").collect();
+        let mut with_underscores: String = "_".repeat(num_underscores);
         with_underscores += parent_dir.file_name().unwrap().to_str().unwrap();
 
         let mut potentially_unique_name = parent_dir.to_owned();
